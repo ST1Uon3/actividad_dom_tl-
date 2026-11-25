@@ -1,0 +1,98 @@
+:root {
+  --negro: #121212;
+  --gris: #5e5e5e;
+  --gris-claro: #d6d1c7;
+  --dorado: #c9a227;
+  --rojo: #b3262e;
+  --beige: #f3ead9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--negro);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 2px solid var(--gris-claro);
+  border-top: 5px solid var(--dorado);
+  border-radius: 14px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 10px 24px rgba(18, 18, 18, 0.12);
+  text-align: center;
+}
+
+.subtitulo {
+  color: var(--gris);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+#numero {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--negro);
+  margin: 0.6rem 0 1.6rem;
+  line-height: 1.1;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.8rem;
+}
+
+#sumarClick,
+#reiniciar {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+#sumarClick {
+  background-color: var(--rojo);
+  color: #ffffff;
+  border: none;
+}
+
+#sumarClick:hover {
+  background-color: #8f1d24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(179, 38, 46, 0.35);
+}
+
+#sumarClick:active {
+  transform: translateY(0);
+}
+
+#reiniciar {
+  background-color: var(--negro);
+  color: var(--beige);
+  border: none;
+}
+
+#reiniciar:hover {
+  background-color: #2c2c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(18, 18, 18, 0.25);
+}
+
+#reiniciar:active {
+  transform: translateY(0);
+}

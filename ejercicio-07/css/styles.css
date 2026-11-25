@@ -1,0 +1,90 @@
+:root {
+    --negro: #121212;
+    --gris: #5e5e5e;
+    --gris-claro: #d6d1c7;
+    --dorado: #c9a227;
+    --rojo: #b3262e;
+    --beige: #f3ead9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--negro);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    border: 2px solid var(--gris-claro);
+    border-top: 5px solid var(--dorado);
+    border-radius: 14px;
+    padding: 2.2rem 2rem;
+    box-shadow: 0 10px 24px rgba(18, 18, 18, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.tarjeta h1 {
+    font-size: 1.7rem;
+    color: var(--negro);
+    text-align: center;
+}
+
+.descripcion {
+    color: var(--gris);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+#clave {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--negro);
+    background-color: var(--beige);
+    border: 2px solid var(--gris-claro);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#clave::placeholder {
+    letter-spacing: normal;
+    color: var(--gris);
+}
+
+#clave:focus {
+    background-color: #ffffff;
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+}
+
+.ayuda-box {
+    margin-top: 0.3rem;
+    padding: 0.85rem 1rem;
+    background-color: var(--beige);
+    border-left: 4px solid var(--rojo);
+    border-radius: 8px;
+}
+
+#textoAyuda {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--negro);
+    word-break: break-word;
+}

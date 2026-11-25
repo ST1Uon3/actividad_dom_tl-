@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saludo Interactivo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <article class="tarjeta">
+        <h1>Saludo Interactivo</h1>
+        <p class="descripcion">Ingresa tu nombre y presiona el botón.</p>
+
+        <div class="formulario">
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Por favor ingresa tu nombre"
+                required
+            />
+            <button id="btn-saludar" type="button">Saludar</button>
+        </div>
+
+        <p id="texto"></p>
+    </article>
+
+    <script src="JS/app.js"></script>
+</body>
+</html>

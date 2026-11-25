@@ -1,0 +1,99 @@
+:root {
+    --negro: #121212;
+    --gris: #5e5e5e;
+    --gris-claro: #d6d1c7;
+    --dorado: #c9a227;
+    --rojo: #b3262e;
+    --beige: #f3ead9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--negro);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    border: 2px solid var(--gris-claro);
+    border-top: 5px solid var(--dorado);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 10px 24px rgba(18, 18, 18, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+#tituloImagenPrincipal {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--negro);
+}
+
+.visor-principal {
+    width: 100%;
+    height: 260px;
+    background-color: var(--negro);
+    border: 2px solid var(--gris-claro);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#imagenPrincipal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-miniaturas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+}
+
+.miniatura {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--gris-claro);
+    cursor: pointer;
+    opacity: 0.85;
+    transition: transform 0.2s ease, border-color 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+}
+
+.miniatura:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    border-color: var(--rojo);
+    box-shadow: 0 6px 12px rgba(179, 38, 46, 0.25);
+}
+
+.miniatura:active {
+    transform: translateY(0);
+    border-color: var(--dorado);
+}
+
+.activa {
+    opacity: 1;
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.35);
+    outline: none;
+}

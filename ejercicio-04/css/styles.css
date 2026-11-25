@@ -1,0 +1,94 @@
+:root {
+    --negro: #121212;
+    --gris: #5e5e5e;
+    --gris-claro: #d6d1c7;
+    --dorado: #c9a227;
+    --rojo: #b3262e;
+    --beige: #f3ead9;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--negro);
+    min-height: 100vh;
+    margin: 0;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.color-card {
+    width: 100%;
+    max-width: 24rem;
+    background-color: #ffffff;
+    border: 2px solid var(--gris-claro);
+    border-top: 5px solid var(--dorado);
+    border-radius: 14px;
+    padding: 0.75rem;
+    box-shadow: 0 10px 24px rgba(18, 18, 18, 0.12);
+    transition: background-color 0.3s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.color-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--dorado);
+}
+
+.card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--negro);
+    margin-bottom: 0.6rem;
+}
+
+.card-text {
+    font-size: 0.96rem;
+    color: var(--gris);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+#dropdownMenuButton1 {
+    width: 100%;
+    background-color: var(--rojo);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+#dropdownMenuButton1:hover,
+#dropdownMenuButton1:focus {
+    background-color: #8f1d24;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(179, 38, 46, 0.35);
+}
+
+.dropdown-menu {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid var(--gris-claro);
+    border-radius: 8px;
+    padding: 0.4rem;
+    box-shadow: 0 8px 18px rgba(18, 18, 18, 0.12);
+}
+
+.dropdown-item {
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--negro);
+    padding: 0.5rem 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--beige);
+    color: var(--rojo);
+}
