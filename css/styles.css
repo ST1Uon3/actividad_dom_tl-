@@ -1,0 +1,127 @@
+:root {
+  --negro: #121212;
+  --gris: #5e5e5e;
+  --gris-claro: #d6d1c7;
+  --dorado: #c9a227;
+  --rojo: #b3262e;
+  --beige: #f3ead9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--negro);
+  min-height: 100vh;
+  padding: 2.5rem 1.25rem;
+}
+
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.encabezado {
+  background-color: #ffffff;
+  border: 2px solid var(--gris-claro);
+  border-top: 5px solid var(--dorado);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(18, 18, 18, 0.1);
+  text-align: center;
+}
+
+.encabezado h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--negro);
+  margin-bottom: 0.5rem;
+}
+
+.encabezado p {
+  color: var(--gris);
+  font-size: 1rem;
+}
+
+.grid-ejercicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.15rem;
+}
+
+.tarjeta-ejercicio {
+  background-color: #ffffff;
+  border: 2px solid var(--gris-claro);
+  border-left: 5px solid var(--dorado);
+  border-radius: 12px;
+  padding: 1.35rem;
+  box-shadow: 0 6px 16px rgba(18, 18, 18, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-ejercicio:hover {
+  transform: translateY(-3px);
+  border-left-color: var(--rojo);
+  box-shadow: 0 10px 22px rgba(18, 18, 18, 0.14);
+}
+
+.numero-ejercicio {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--rojo);
+  margin-bottom: 0.3rem;
+}
+
+.tarjeta-ejercicio h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--negro);
+  margin-bottom: 0.35rem;
+}
+
+.tarjeta-ejercicio p {
+  font-size: 0.9rem;
+  color: var(--gris);
+  line-height: 1.4;
+}
+
+.btn-abrir {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--rojo);
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-abrir:hover {
+  background-color: #8f1d24;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.pie {
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
